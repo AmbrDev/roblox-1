@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+  <head data-machine-id="WEB1970">
+    <script src="scripts/account.js"></script>
+    <style type="text/css">
+      [uib-tooltip-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom > .tooltip-arrow,[uib-popover-popup].popover.top-left > .arrow,[uib-popover-popup].popover.top-right > .arrow,[uib-popover-popup].popover.bottom-left > .arrow,[uib-popover-popup].popover.bottom-right > .arrow,[uib-popover-popup].popover.left-top > .arrow,[uib-popover-popup].popover.left-bottom > .arrow,[uib-popover-popup].popover.right-top > .arrow,[uib-popover-popup].popover.right-bottom > .arrow,[uib-popover-html-popup].popover.top-left > .arrow,[uib-popover-html-popup].popover.top-right > .arrow,[uib-popover-html-popup].popover.bottom-left > .arrow,[uib-popover-html-popup].popover.bottom-right > .arrow,[uib-popover-html-popup].popover.left-top > .arrow,[uib-popover-html-popup].popover.left-bottom > .arrow,[uib-popover-html-popup].popover.right-top > .arrow,[uib-popover-html-popup].popover.right-bottom > .arrow,[uib-popover-template-popup].popover.top-left > .arrow,[uib-popover-template-popup].popover.top-right > .arrow,[uib-popover-template-popup].popover.bottom-left > .arrow,[uib-popover-template-popup].popover.bottom-right > .arrow,[uib-popover-template-popup].popover.left-top > .arrow,[uib-popover-template-popup].popover.left-bottom > .arrow,[uib-popover-template-popup].popover.right-top > .arrow,[uib-popover-template-popup].popover.right-bottom > .arrow{
+        top:auto;bottom:auto;left:auto;right:auto;margin:0;
+      }
+      [uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{
+        display:block !important;
+      }
+    </style>
+    <style type="text/css">
+      .uib-position-measure{
+        display:block !important;
+        visibility:hidden !important;
+        position:absolute !important;
+        top:-9999px !important;
+        left:-9999px !important;
+      }
+      .uib-position-scrollbar-measure{
+        position:absolute !important;
+        top:-9999px !important;
+        width:50px !important;
+        height:50px !important;
+        overflow:scroll !important;
+      }
+      .uib-position-body-scrollbar-measure{
+        overflow:scroll !important;
+      }
+    </style>
+    <style type="text/css">
+      .ng-animate.item:not(.left):not(.right){
+        -webkit-transition:0s ease-in-out left;
+        transition:0s ease-in-out left;
+      }
+    </style>
+    <style type="text/css">
+      @charset "UTF-8";
+      [ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){
+        display:none !important;
+      }
+      ng\:form{
+        display:block;
+      }
+      .ng-animate-shim{
+        visibility:hidden;
+      }
+      .ng-anchor{
+        position:absolute;
+      }
+    </style>
+    <style type="text/css">
+      [uib-tooltip-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom > .tooltip-arrow,[uib-popover-popup].popover.top-left > .arrow,[uib-popover-popup].popover.top-right > .arrow,[uib-popover-popup].popover.bottom-left > .arrow,[uib-popover-popup].popover.bottom-right > .arrow,[uib-popover-popup].popover.left-top > .arrow,[uib-popover-popup].popover.left-bottom > .arrow,[uib-popover-popup].popover.right-top > .arrow,[uib-popover-popup].popover.right-bottom > .arrow,[uib-popover-html-popup].popover.top-left > .arrow,[uib-popover-html-popup].popover.top-right > .arrow,[uib-popover-html-popup].popover.bottom-left > .arrow,[uib-popover-html-popup].popover.bottom-right > .arrow,[uib-popover-html-popup].popover.left-top > .arrow,[uib-popover-html-popup].popover.left-bottom > .arrow,[uib-popover-html-popup].popover.right-top > .arrow,[uib-popover-html-popup].popover.right-bottom > .arrow,[uib-popover-template-popup].popover.top-left > .arrow,[uib-popover-template-popup].popover.top-right > .arrow,[uib-popover-template-popup].popover.bottom-left > .arrow,[uib-popover-template-popup].popover.bottom-right > .arrow,[uib-popover-template-popup].popover.left-top > .arrow,[uib-popover-template-popup].popover.left-bottom > .arrow,[uib-popover-template-popup].popover.right-top > .arrow,[uib-popover-template-popup].popover.right-bottom > .arrow{
+        top:auto;
+        bottom:auto;
+        left:auto;
+        right:auto;
+        margin:0;
+      }
+      [uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{
+        display:block !important;
+      }
+    </style>
+    <style type="text/css">
+      .uib-position-measure{
+        display:block !important;
+        visibility:hidden !important;
+        position:absolute !important;
+        top:-9999px !important;
+        left:-9999px !important;
+      }
+      .uib-position-scrollbar-measure{
+        position:absolute !important;
+        top:-9999px !important;
+        width:50px !important;
+        height:50px !important;
+        overflow:scroll !important;
+      }
+      .uib-position-body-scrollbar-measure{
+        overflow:scroll !important;
+      }
+    </style>
+    <style type="text/css">
+      .ng-animate.item:not(.left):not(.right){
+        -webkit-transition:0s ease-in-out left;
+        transition:0s ease-in-out left;
+      }
+    </style>
+    <style type="text/css">
+      @charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){
+        display:none !important;
+      }
+      ng\:form{
+        display:block;
+      }
+      .ng-animate-shim{
+        visibility:hidden;
+      }
+      .ng-anchor{
+        position:absolute;
+      }
+    </style>
+    <style type="text/css">
+      [uib-tooltip-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom > .tooltip-arrow,[uib-popover-popup].popover.top-left > .arrow,[uib-popover-popup].popover.top-right > .arrow,[uib-popover-popup].popover.bottom-left > .arrow,[uib-popover-popup].popover.bottom-right > .arrow,[uib-popover-popup].popover.left-top > .arrow,[uib-popover-popup].popover.left-bottom > .arrow,[uib-popover-popup].popover.right-top > .arrow,[uib-popover-popup].popover.right-bottom > .arrow,[uib-popover-html-popup].popover.top-left > .arrow,[uib-popover-html-popup].popover.top-right > .arrow,[uib-popover-html-popup].popover.bottom-left > .arrow,[uib-popover-html-popup].popover.bottom-right > .arrow,[uib-popover-html-popup].popover.left-top > .arrow,[uib-popover-html-popup].popover.left-bottom > .arrow,[uib-popover-html-popup].popover.right-top > .arrow,[uib-popover-html-popup].popover.right-bottom > .arrow,[uib-popover-template-popup].popover.top-left > .arrow,[uib-popover-template-popup].popover.top-right > .arrow,[uib-popover-template-popup].popover.bottom-left > .arrow,[uib-popover-template-popup].popover.bottom-right > .arrow,[uib-popover-template-popup].popover.left-top > .arrow,[uib-popover-template-popup].popover.left-bottom > .arrow,[uib-popover-template-popup].popover.right-top > .arrow,[uib-popover-template-popup].popover.right-bottom > .arrow{
+        top:auto;
+        bottom:auto;
+        left:auto;
+        right:auto;
+        margin:0;
+      }
+      [uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{
+        display:block !important;
+      }
+    </style>
+    <style type="text/css">
+      .uib-position-measure{
+        display:block !important;
+        visibility:hidden !important;
+        position:absolute !important;
+        top:-9999px !important;
+        left:-9999px !important;
+      }
+      .uib-position-scrollbar-measure{
+        position:absolute !important;
+        top:-9999px !important;
+        width:50px !important;
+        height:50px !important;
+        overflow:scroll !important;
+      }
+      .uib-position-body-scrollbar-measure{
+        overflow:scroll !important;
+      }
+    </style>
+    <style type="text/css">
+      .ng-animate.item:not(.left):not(.right){
+        -webkit-transition:0s ease-in-out left;
+        transition:0s ease-in-out left;
+      }
+    </style>
+    <style type="text/css">
+      @charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){
+        display:none !important;
+      }
+      ng\:form{
+        display:block;
+      }
+      .ng-animate-shim{
+        visibility:hidden;
+      }
+      .ng-anchor{
+        position:absolute;
+      }
+    </style>
+    <style type="text/css">
+      [uib-tooltip-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom > .tooltip-arrow,[uib-popover-popup].popover.top-left > .arrow,[uib-popover-popup].popover.top-right > .arrow,[uib-popover-popup].popover.bottom-left > .arrow,[uib-popover-popup].popover.bottom-right > .arrow,[uib-popover-popup].popover.left-top > .arrow,[uib-popover-popup].popover.left-bottom > .arrow,[uib-popover-popup].popover.right-top > .arrow,[uib-popover-popup].popover.right-bottom > .arrow,[uib-popover-html-popup].popover.top-left > .arrow,[uib-popover-html-popup].popover.top-right > .arrow,[uib-popover-html-popup].popover.bottom-left > .arrow,[uib-popover-html-popup].popover.bottom-right > .arrow,[uib-popover-html-popup].popover.left-top > .arrow,[uib-popover-html-popup].popover.left-bottom > .arrow,[uib-popover-html-popup].popover.right-top > .arrow,[uib-popover-html-popup].popover.right-bottom > .arrow,[uib-popover-template-popup].popover.top-left > .arrow,[uib-popover-template-popup].popover.top-right > .arrow,[uib-popover-template-popup].popover.bottom-left > .arrow,[uib-popover-template-popup].popover.bottom-right > .arrow,[uib-popover-template-popup].popover.left-top > .arrow,[uib-popover-template-popup].popover.left-bottom > .arrow,[uib-popover-template-popup].popover.right-top > .arrow,[uib-popover-template-popup].popover.right-bottom > .arrow{
+        top:auto;
+        bottom:auto;
+        left:auto;
+        right:auto;
+        margin:0;
+      }
+      [uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{
+        display:block !important;
+      }
+    </style>
+    <style type="text/css">
+      .uib-position-measure{
+        display:block !important;
+        visibility:hidden !important;
+        position:absolute !important;
+        top:-9999px !important;
+        left:-9999px !important;
+      }
+      .uib-position-scrollbar-measure{
+        position:absolute !important;
+        top:-9999px !important;
+        width:50px !important;
+        height:50px !important;
+        overflow:scroll !important;
+      }
+      .uib-position-body-scrollbar-measure{
+        overflow:scroll !important;
+      }
+    </style>
+    <style type="text/css">
+      .ng-animate.item:not(.left):not(.right){
+        -webkit-transition:0s ease-in-out left;
+        transition:0s ease-in-out left;
+      }
+    </style>
+    <style type="text/css">
+      @charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){
+        display:none !important;
+      }
+      ng\:form{
+        display:block;
+      }
+      .ng-animate-shim{
+        visibility:hidden;
+      }
+      .ng-anchor{
+        position:absolute;
+      }
+    </style>
+    <title>Home - Roblox</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,requiresActiveX=true">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" data-bundlename="StyleGuide" href="css/1.css">
+    <link rel="stylesheet" href="css/2.css">
+  </head>
+  <body id="rbx-body" class="rbx-body dark-theme gotham-font" data-performance-relative-value="0.005" data-internal-page-name="Home" data-send-event-percentage="0" onload="loadProfile()">
+    <div id="wrap" class="wrap no-gutter-ads logged-in" data-gutter-ads-enabled="false">
+      <div id="header" class="navbar-fixed-top rbx-header dark-theme gotham-font" data-isauthenticated="true" role="navigation">
+        <div class="container-fluid">
+          <div class="rbx-navbar-header">
+            <div data-behavior="nav-notification" class="rbx-nav-collapse" onselectstart="return false">
+              <span class="icon-nav-menu"></span>
+            </div>
+            <div class="navbar-header">
+              <a class="navbar-brand" href="">
+                <span class="icon-logo"></span>
+                <span class="icon-logo-r"></span>
+              </a>
+            </div>
+          </div>
+          <ul class="nav rbx-navbar hidden-xs hidden-sm col-md-4 col-lg-3">
+            <li class="cursor-pointer">
+              <a class="font-header-2 nav-menu-title text-header" href="">Games</a>
+            </li>
+            <li class="cursor-pointer">
+              <a class="font-header-2 nav-menu-title text-header" href="">Catalog</a>
+            </li>
+            <li class="cursor-pointer">
+              <a class="font-header-2 nav-menu-title text-header" href="">Create</a>
+            </li>
+            <li class="cursor-pointer">
+              <a class="font-header-2 buy-robux nav-menu-title text-header" href="robux.html">Robux</a>
+            </li>
+          </ul>
+            <div id="navbar-universal-search" class="navbar-left rbx-navbar-search col-xs-5 col-sm-6 col-md-3" data-behavior="univeral-search" role="search">
+              <div class="input-group"><input id="navbar-search-input" class="form-control input-field" type="text" placeholder="Search" maxlength="120">
+                <div class="input-group-btn">
+                  <button id="navbar-search-btn" class="input-addon-btn" type="submit">
+                    <span class="icon-nav-search"></span>
+                  </button>
+                </div>
+              </div>
+              <ul data-toggle="dropdown-menu" class="dropdown-menu" role="menu">
+                <li class="rbx-navbar-search-option rbx-clickable-li selected" data-searchurl="">
+                  <a class="rbx-navbar-search-anchor" href="">
+                    <span class="rbx-navbar-search-text"> Search "
+                      <span class="rbx-navbar-search-string"></span>" in Players
+                    </span>
+                  </a>
+                </li>
+                <li class="rbx-navbar-search-option rbx-clickable-li" data-searchurl="">
+                  <a class="rbx-navbar-search-anchor" href="">
+                    <span class="rbx-navbar-search-text"> Search "
+                      <span class="rbx-navbar-search-string"></span>" in Games
+                    </span>
+                  </a>
+                </li>
+                <li class="rbx-navbar-search-option rbx-clickable-li" data-searchurl="">
+                  <a class="rbx-navbar-search-anchor" href="">
+                    <span class="rbx-navbar-search-text"> Search "
+                      <span class="rbx-navbar-search-string"></span>" in Catalog
+                    </span>
+                  </a>
+                </li>
+                <li class="rbx-navbar-search-option rbx-clickable-li" data-searchurl="">
+                  <a class="rbx-navbar-search-anchor" href="">
+                    <span class="rbx-navbar-search-text"> Search "
+                      <span class="rbx-navbar-search-string"></span>" in Groups
+                    </span>
+                  </a>
+                </li>
+                <li class="rbx-navbar-search-option rbx-clickable-li" data-searchurl="">
+                  <a class="rbx-navbar-search-anchor" href="">
+                    <span class="rbx-navbar-search-text"> Search "
+                      <span class="rbx-navbar-search-string"></span>" in Library
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="navbar-right rbx-navbar-right">
+              <ul class="nav navbar-right rbx-navbar-icon-group">
+                <li id="navbar-setting" class="navbar-icon-item">
+                  <a class="rbx-menu-item roblox-popover-close" data-toggle="popover" data-bind="popover-setting" data-viewport="#header" data-original-title="" title="">
+                    <span class="icon-nav-settings roblox-popover-close" id="nav-settings"></span>
+                    <span class="notification-red notification nav-setting-highlight hidden">0</span>
+                  </a>
+                  <div class="rbx-popover-content" data-toggle="popover-setting">
+                    <ul class="dropdown-menu" role="menu">
+                      <li>
+                        <a class="rbx-menu-item" href=""> Settings
+                          <span class="notification-blue notification nav-setting-highlight hidden">0</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="rbx-menu-item" href="" target="_blank">Help</a>
+                      </li>
+                      <li>
+                        <a class="rbx-menu-item" data-behavior="logout" data-bind="">Logout</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li id="navbar-robux" class="navbar-icon-item">
+                  <a id="nav-robux-icon" class="nav-robux-icon rbx-menu-item" data-toggle="popover" data-bind="popover-robux" data-original-title="" title="">
+                    <span class="icon-nav-robux roblox-popover-close" id="nav-robux"></span>
+                    <span class="rbx-text-navbar-right text-header" id="nav-robux-amount">0</span>
+                  </a>
+                  <div class="rbx-popover-content" data-toggle="popover-robux">
+                    <ul class="dropdown-menu" role="menu">
+                      <li>
+                        <a href="" id="nav-robux-balance" class="rbx-menu-item">1&nbsp;Robux</a>
+                      </li>
+                      <li>
+                        <a href="" class="rbx-menu-item">Buy Robux</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="navbar-icon-item navbar-stream">
+                  <div class="notification-stream" ng-class="{'inApp': library.inApp}" id="notification-stream-icon-container" notification-stream-icon="">
+                    <a id="nav-ns-icon" class="roblox-popover rbx-menu-item notification-stream-icon" data-bind="notification-stream-base" data-container="notification-stream-container" notification-indicator="">
+                      <span class="icon-nav-notification-stream" id="nav-notifications"></span>
+                      <span class="notification-red notification ng-binding ng-hide" ng-show="layout.unreadNotifications > 0 &amp;&amp; (!layout.isNotificationContentOpen)">  </span>
+                    </a>
+                  </div>
+                </li>
+                <li class="rbx-navbar-right-search" data-toggle="toggle-search">
+                  <a class="rbx-menu-icon rbx-menu-item">
+                    <span class="icon-nav-search-white"></span>
+                  </a>
+                </li>
+              </ul>
+              <div class="xsmall age-bracket-label text-header">
+                <span class="age-bracket-label-username font-caption-header">Loading: </span>13+
+              </div>
+            </div>
+            <ul class="nav rbx-navbar hidden-md hidden-lg col-xs-12">
+              <li class="cursor-pointer">
+                <a class="font-header-2 nav-menu-title text-header" href="">Games</a>
+              </li>
+              <li class="cursor-pointer">
+                <a class="font-header-2 nav-menu-title text-header" href="">Catalog</a>
+              </li>
+              <li class="cursor-pointer">
+                <a class="font-header-2 nav-menu-title text-header" href="">Create</a>
+              </li>
+              <li class="cursor-pointer">
+                <a class="font-header-2 buy-robux nav-menu-title text-header" href="">Robux</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="container-main">
+          <div class="content">
+            <div id="HomeContainer" class="row home-container">
+              <div class="col-xs-12 home-header">
+                <a href="" class="avatar avatar-headshot-lg">
+                  <img alt="avatar" src="https://tr.rbxcdn.com/61621a5b458745c3bfc67bb46b668fc0/150/150/AvatarHeadshot/Png" id="home-avatar-thumb" class="avatar-card-image">
+                </a>
+                <div class="home-header-content non-bc">
+                  <h1>
+                    <a href=""> Hello, Loading! </a>
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="container-footer">
+          <div class="footer">
+            <ul class="row footer-links">
+              <li class="footer-link">
+                <a href="" class="text-footer-nav roblox-interstitial" target="_blank"> About Us </a>
+              </li>
+              <li class="footer-link">
+                <a href="" class="text-footer-nav roblox-interstitial" target="_blank"> Jobs </a>
+              </li>
+              <li class="footer-link">
+                <a href="" class="text-footer-nav" target="_blank"> Blog </a>
+              </li>
+              <li class="footer-link">
+                <a href="" class="text-footer-nav roblox-interstitial" target="_blank"> Parents </a>
+              </li>
+              <li class="footer-link">
+                <a href="" class="text-footer-nav roblox-interstitial" target="_blank"> Help </a>
+              </li>
+              <li class="footer-link">
+                <a href="" class="text-footer-nav" target="_blank"> Terms </a>
+              </li>
+              <li class="footer-link">
+                <a href="" class="text-footer-nav privacy" target="_blank"> Privacy </a>
+              </li>
+            </ul>
+            <div class="row copyright-wrapper">
+              <div class="col-sm-6 col-md-3">
+                <div class="rbx-select-group icon-dropdown">
+                  <select class="rbx-select language-select" id="language-switcher">
+                    <option value="de_de" data-is-supported="true"> Deutsch </option>
+                    <option value="en_us" data-is-supported="true" selected=""> English </option>
+                    <option value="es_es" data-is-supported="true"> Español </option>
+                    <option value="fr_fr" data-is-supported="true"> Français </option>
+                    <option value="pt_br" data-is-supported="true"> Português (Brasil) </option>
+                    <option value="ko_kr" data-is-supported="true"> 한국어 </option>
+                    <option value="zh_cn" data-is-supported="true"> 中文(简体) </option>
+                    <option value="zh_tw" data-is-supported="true"> 中文(繁體) </option>
+                    <option value="id_id" data-is-supported="false"> Bahasa Indonesia* </option>
+                    <option value="ms_my" data-is-supported="false"> bahasa Melayu* </option>
+                    <option value="nb_no" data-is-supported="false"> bokmål* </option>
+                    <option value="cs_cz" data-is-supported="false"> čeština* </option>
+                    <option value="da_dk" data-is-supported="false"> dansk* </option>
+                    <option value="et_ee" data-is-supported="false"> eesti* </option>
+                    <option value="fil_ph" data-is-supported="false"> Filipino* </option>
+                    <option value="hr_hr" data-is-supported="false"> hrvatski* </option>
+                    <option value="it_it" data-is-supported="false"> Italiano* </option>
+                    <option value="lv_lv" data-is-supported="false"> latviešu* </option>
+                    <option value="lt_lt" data-is-supported="false"> lietuvių* </option>
+                    <option value="hu_hu" data-is-supported="false"> magyar* </option>
+                    <option value="nl_nl" data-is-supported="false"> Nederlands* </option>
+                    <option value="pl_pl" data-is-supported="false"> polski* </option>
+                    <option value="ro_ro" data-is-supported="false"> română* </option>
+                    <option value="sq_al" data-is-supported="false"> shqipe* </option>
+                    <option value="sk_sk" data-is-supported="false"> slovenčina* </option>
+                    <option value="sl_sl" data-is-supported="false"> slovenski* </option>
+                    <option value="fi_fi" data-is-supported="false"> suomi* </option>
+                    <option value="sv_se" data-is-supported="false"> svenska* </option>
+                    <option value="vi_vn" data-is-supported="false"> Tiếng Việt Nam* </option>
+                    <option value="tr_tr" data-is-supported="false"> Türkçe* </option>
+                    <option value="el_gr" data-is-supported="false"> ελληνικά* </option>
+                    <option value="bs_ba" data-is-supported="false"> босански* </option>
+                    <option value="bg_bg" data-is-supported="false"> български* </option>
+                    <option value="kk_kz" data-is-supported="false"> қазақ тілі* </option>
+                    <option value="ru_ru" data-is-supported="false"> Русский* </option>
+                    <option value="sr_rs" data-is-supported="false"> српски* </option>
+                    <option value="uk_ua" data-is-supported="false"> україньска* </option>
+                    <option value="ka_ge" data-is-supported="false"> ქართული* </option>
+                    <option value="hi_in" data-is-supported="false"> हिन्दी* </option>
+                    <option value="bn_bd" data-is-supported="false"> বাংলা* </option>
+                    <option value="si_lk" data-is-supported="false"> සිංහල* </option>
+                    <option value="th_th" data-is-supported="false"> ภาษาไทย* </option>
+                    <option value="my_mm" data-is-supported="false"> ဗမာစာ* </option>
+                    <option value="km_kh" data-is-supported="false"> ភាសាខ្មែរ* </option>
+                    <option value="ja_jp" data-is-supported="false"> 日本語* </option>
+                  </select>
+                  <span class="icon-arrow icon-down-16x16"></span>
+                </div>
+                <div class="input-group-btn">
+                  <button type="button" class="input-dropdown-btn" data-toggle="dropdown">
+                    <span class="icon-globe"></span>
+                    <span class="rbx-selection-label" data-bind="label"> English </span>
+                    <span class="icon-down-16x16"></span>
+                  </button>
+                  <ul data-toggle="dropdown-menu" class="dropdown-menu" role="menu">
+                    <li>
+                      <a href="#" class="locale-option" data-locale="de_de" data-is-supported="true"> Deutsch </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="en_us" data-is-supported="true"> English </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="es_es" data-is-supported="true"> Español </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="fr_fr" data-is-supported="true"> Français </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="pt_br" data-is-supported="true"> Português (Brasil) </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="ko_kr" data-is-supported="true"> 한국어 </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="zh_cn" data-is-supported="true"> 中文(简体) </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="zh_tw" data-is-supported="true"> 中文(繁體) </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="id_id" data-is-supported="false"> Bahasa Indonesia* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="ms_my" data-is-supported="false"> bahasa Melayu* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="nb_no" data-is-supported="false"> bokmål* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="cs_cz" data-is-supported="false"> čeština* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="da_dk" data-is-supported="false"> dansk* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="et_ee" data-is-supported="false"> eesti* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="fil_ph" data-is-supported="false"> Filipino* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="hr_hr" data-is-supported="false"> hrvatski* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="it_it" data-is-supported="false"> Italiano* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="lv_lv" data-is-supported="false"> latviešu* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="lt_lt" data-is-supported="false"> lietuvių* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="hu_hu" data-is-supported="false"> magyar* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="nl_nl" data-is-supported="false"> Nederlands* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="pl_pl" data-is-supported="false"> polski* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="ro_ro" data-is-supported="false"> română* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="sq_al" data-is-supported="false"> shqipe* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="sk_sk" data-is-supported="false"> slovenčina* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="sl_sl" data-is-supported="false"> slovenski* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="fi_fi" data-is-supported="false"> suomi* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="sv_se" data-is-supported="false"> svenska* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="vi_vn" data-is-supported="false"> Tiếng Việt Nam* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="tr_tr" data-is-supported="false"> Türkçe* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="el_gr" data-is-supported="false"> ελληνικά* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="bs_ba" data-is-supported="false"> босански* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="bg_bg" data-is-supported="false"> български* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="kk_kz" data-is-supported="false"> қазақ тілі* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="ru_ru" data-is-supported="false"> Русский* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="sr_rs" data-is-supported="false"> српски* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="uk_ua" data-is-supported="false"> україньска* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="ka_ge" data-is-supported="false"> ქართული* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="hi_in" data-is-supported="false"> हिन्दी* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="bn_bd" data-is-supported="false"> বাংলা* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="si_lk" data-is-supported="false"> සිංහල* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="th_th" data-is-supported="false"> ภาษาไทย* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="my_mm" data-is-supported="false"> ဗမာစာ* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="km_kh" data-is-supported="false"> ភាសាខ្មែរ* </a>
+                    </li>
+                    <li>
+                      <a href="#" class="locale-option" data-locale="ja_jp" data-is-supported="false"> 日本語* </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-9">
+                <p class="text-footer footer-note">©2019 Roblox Corporation. Roblox, the Roblox logo and Powering Imagination are among our registered and unregistered trademarks in the U.S. and other countries.</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+  </body>
+</html>

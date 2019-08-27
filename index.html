@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html><!--<![endif]-->
+  <head data-machine-id="WEB1970">
+    <style type="text/css">
+      @charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){
+        display:none !important;
+      }
+      ng\:form{
+        display:block;
+      }
+      .ng-animate-shim{
+        visibility:hidden;
+      }
+      .ng-anchor{
+        position:absolute;
+      }
+    </style>
+    <title>Roblox</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-itunes-app" content="app-id=431946152">
+    <link onerror="Roblox.BundleDetector &amp;&amp; Roblox.BundleDetector.reportBundleError(this)" rel="stylesheet" data-bundlename="StyleGuide" href="css/1.css">
+    <link onerror="Roblox.BundleDetector &amp;&amp; Roblox.BundleDetector.reportBundleError(this)" rel="stylesheet" href="css/3.css">
+    <script src="scripts/account.js"></script>
+  </head>
+  <body id="rbx-body" class="rbx-body    gotham-font" data-performance-relative-value="0.005" data-internal-page-name="Landing" data-send-event-percentage="0">
+    <div id="landing-container" class="landing-container ng-scope">
+      <div landing-base="" class="landing-base" is-login-fun-captcha-enabled="true" is-always-captcha-login-enabled="false" is-always-captcha-sign-up-enabled="false" is-captcha-v2-component-for-sign-up-enabled="true" is-captcha-v2-component-for-login-enabled="true">
+        <div ng-controller="landingController" class="ng-scope">
+          <div class="mobile-nav-container">
+            <ul id="MobileNavLinks" class="nav navbar-nav">
+              <li class="pull-left">
+                <a href="#RollerContainer" target="_self" onclick="return scrollTo(1, '#RollerContainer');">
+                  <span ng-bind="'Label.Play' | translate" class="ng-binding">Play</span>
+                </a>
+              </li>
+              <li class="pull-left">
+                <a href="#WhatsRobloxContainer" target="_self" onclick="return scrollTo(2, '#WhatsRobloxContainer');">
+                  <span ng-bind="'Label.About' | translate" class="ng-binding">About</span>
+                </a>
+              </li>
+              <li class="pull-left">
+                <a href="#RobloxDeviceText" target="_self" onclick="return scrollTo(3, '#RobloxDeviceText');">
+                  <span ng-bind="'Label.Platforms' | translate" class="ng-binding">Platforms</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar navbar-landing navbar-fixed-top" role="navigation" style="background-color: rgba(0, 0, 0, 0.35);">
+            <div class="container">
+              <div class="row">
+                <div class="navbar-header col-md-6">
+                  <button type="button" class="navbar-toggle ng-binding" data-toggle="collapse" data-target="#LandingNavbar" ng-bind="'Action.LogInCapitalized' | translate">Log In</button>
+                  <div class="navbar-brand hidden-xs">
+                    <div class="logo-o"></div>
+                  </div>
+                  <span id="menu-toggle" class="icon-menu"></span>
+                  <ul id="TopLeftNavLinks" class="nav navbar-nav">
+                    <li id="PlayLink" class="pull-left">
+                      <a href="#RollerContainer" target="_self" onclick="return scrollTo(1, '#RollerContainer');">
+                        <span ng-bind="'Label.Play' | translate" class="ng-binding">Play</span>
+                      </a>
+                    </li>
+                    <li id="AboutLink" class="pull-left">
+                      <a href="#WhatsRobloxContainer" target="_self" onclick="return scrollTo(2, '#WhatsRobloxContainer');">
+                        <span ng-bind="'Label.About' | translate" class="ng-binding">About</span>
+                      </a>
+                    </li>
+                    <li id="PlatformLink" class="pull-left">
+                      <a href="#RobloxDeviceText" target="_self" onclick="return scrollTo(3, '#RobloxDeviceText');">
+                        <span ng-bind="'Label.Platforms' | translate" class="ng-binding">Platforms</span>
+                      </a>
+                    </li>
+                    <li id="magic-line" style="left: 41px; width: 70px;"></li>
+                  </ul>
+                </div>
+                <div id="login-container" class="col-md-5 landing-login">
+                  <div id="LandingNavbar" class="collapse mobile-login">
+                    <div login-form="" class="login-container ng-isolate-scope" context="mobileLanding" redirect-to-login-page-on-error="true" redirect-to-home-post-login="true" is-login-fun-captcha-enabled="true" is-always-captcha-login-enabled="false" is-captcha-v2-component-for-login-enabled="true">
+                      <div ng-init="init('login')">
+                        <div class="login-form-container">
+                          <form class="login-form ng-pristine ng-valid" role="form" name="loginForm" rbx-form-context="" context="mobileLanding">
+                            <div class="form-group username-form-group">
+                              <input id="login-username" name="username" class="form-control input-field ng-pristine ng-untouched ng-valid ng-empty" placeholder="Username/Email/Phone" ng-model="loginFormData.credentialValue" ng-keypress="clearError()" rbx-form-interaction="">
+                            </div>
+                            <div class="form-group password-form-group">
+                              <input id="login-password" name="password" type="password" class="form-control input-field ng-pristine ng-untouched ng-valid ng-empty" placeholder="Password" ng-model="loginFormData.password" key-press-enter="submit(true)" ng-keypress="clearError()" rbx-form-interaction="">
+                              <p class="form-control-label xsmall text-error login-error ng-binding" ng-bind="loginLayout.error"></p>
+                            </div>
+                            <div toggle-loading="" is-loading="loginLayout.isProcessing || loginCaptchaActivated">
+                              <button id="login-button" class="btn-full-width login-button ng-binding btn-secondary-md" ng-class="loginLayout.usePrimaryButtonClass ? 'btn-primary-md' : 'btn-secondary-md'" ng-bind="'Action.LogInCapitalized' | translate" ng-click="submit(true)">Log In</button>
+                            </div>
+                            <div class="spinner spinner-sm spinner-no-margin spinner-block" style="display: none;"></div>
+                            <div class="text-center forgot-credentials-link">
+                              <a id="forgot-credentials-link" class="text-link ng-binding" href="https://www.roblox.com/login/forgot-password-or-username" target="_self" ng-bind="'Action.ForgotPasswordOrUsernameQuestionCapitalized' | translate">Forgot Password or Username?</a>
+                            </div>
+                          </form>
+                        </div>
+                        <div ng-if="loginParams.isLoginFunCaptchaEnabled" fun-captcha="" captcha-model="funCaptchaSetting" captcha-type="funCaptchaSetting.captchaType" show-in-modal="funCaptchaSetting.showInModal" on-fun-captcha-success="funCaptchaSetting.successCb()" on-fun-captcha-error="funCaptchaSetting.errorCb(errorCode)" on-fun-captcha-closed="funCaptchaSetting.closedCb()" credentials-value="loginFormData.credentialValue" credentials-type="loginFormData.enteredCredentialType" class="ng-scope ng-isolate-scope">
+                          <div id="login" ng-show="showContainer"></div>
+                        </div>
+                        <captcha activated="loginCaptchaActivated" captcha-action-type="captchaActionTypes.login" extra-validation-params="captchaExtraValidationParams" captcha-failed="handleCaptchaError" captcha-passed="handleCaptchaSuccess" class="ng-isolate-scope">
+                          <div class="modal" ng-class="$ctrl.getCaptchaClasses()" ng-click="$ctrl.hideCaptcha()">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-body" ng-click="$event.stopPropagation()">
+                                  <button type="button" class="close" ng-click="$ctrl.hideCaptcha()">
+                                    <span aria-hidden="true">
+                                      <span class="icon-close"></span>
+                                    </span>
+                                    <span class="sr-only">Close</span>
+                                  </button>
+                                  <div id="captchaV2-1" class="captchav2-funcaptcha-modal-body"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </captcha>
+                      </div>
+                    </div>
+                  </div>
+                  <div horizontal-login-form="" class="horizontal-login-container" context="landing" redirect-to-login-page-on-error="true" redirect-to-home-post-login="true" is-login-fun-captcha-enabled="true" is-always-captcha-login-enabled="false" is-captcha-v2-component-for-login-enabled="true">
+                    <div class="horizontal-login-form" ng-init="init('horizontalLogin')">
+                      <div class="login-form ng-pristine ng-valid" role="form" name="loginForm" rbx-form-context="" context="">
+                        <div class="form-group username-form-group">
+                          <input id="horizontal-login-username" name="username" class="form-control ng-pristine ng-valid ng-empty ng-touched" placeholder="Username/Email/Phone" ng-model="loginFormData.credentialValue" rbx-form-interaction="" autofocus="">
+                        </div>
+                        <div class="form-group password-form-group">
+                          <input id="horizontal-login-password" name="password" type="password" class="form-control ng-pristine ng-valid ng-empty ng-touched" placeholder="Password" ng-model="loginFormData.password" key-press-enter="submit(true)" rbx-form-interaction="">
+                        </div>
+                        <div class="submit-button-container" toggle-loading="" is-inline="true">
+                          <button id="horizontal-login-button" class="btn-primary-sm login-button ng-binding" onclick="login()">Log In</button>
+                        </div>
+                        <div class="spinner spinner-sm spinner-no-margin" style="display: none;"></div>
+                      </div>
+                      <div class="forgot-credentials-link"></div>
+                      <captcha activated="loginCaptchaActivated" captcha-action-type="captchaActionTypes.login" extra-validation-params="captchaExtraValidationParams" captcha-failed="handleCaptchaError" captcha-passed="handleCaptchaSuccess" class="ng-isolate-scope">
+                        <div class="modal" ng-class="$ctrl.getCaptchaClasses()" ng-click="$ctrl.hideCaptcha()">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-body" ng-click="$event.stopPropagation()">
+                                <button type="button" class="close" ng-click="$ctrl.hideCaptcha()">
+                                  <span aria-hidden="true">
+                                    <span class="icon-close"></span>
+                                  </span>
+                                  <span class="sr-only">Close</span>
+                                </button>
+                                <div id="captchaV2-2" class="captchav2-funcaptcha-modal-body"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </captcha>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="alert-container alert-cookie-notice-container">
+              <div class="alert-cookie-notice" data-cookie-notice-timeout="">
+                <span ng-bind-html="'Message.CookieLawNotice' | translate: {startLink: landingLayout.privacyLink, endLink: '</a>'}" class="ng-binding">Roblox uses cookies to offer you a better experience. For further information, including information on how to withdraw consent and how to manage the use of cookies on Roblox, please refer to our
+                  <a href="https://www.roblox.com/info/privacy">Privacy and Cookie Policy</a>.
+                </span>
+                <span class="icon-close cookie-law-notice-dismiss"></span>
+              </div>
+            </div>
+            <section class="row full-height-section rollercoaster-background" id="RollerContainer" ng-class="{'rollercoaster-background' : landingLayout.addBackgroundImages}">
+              <div class="col-md-12 inner-full-height-section" id="InnerRollerContainer">
+                <div id="MainCenterContainer" class="row">
+                  <div class="col-xs-12 col-md-6">
+                    <div id="MainLogo" class="text-right">
+                      <div id="LogoAndSlogan" class="text-center">
+                        <span id="MainLogoImage" title="Roblox" class="icon-logo-tagline-white"></span>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix visible-sm"></div>
+                  <div class="col-xs-12 col-md-6">
+                    <div id="SignUpFormContainer">
+                      <div class="rbx-login-partial-legacy ng-isolate-scope" sign-up="" is-always-captcha-sign-up-enabled="false" is-captcha-v2-component-for-sign-up-enabled="true">
+                        <h3 class="text-center signup-header ng-binding" ng-bind="'Heading.SignupHaveFun' | translate">Sign up and start having fun!</h3>
+                        <div class="signup-or-log-in new-username-pwd-rule">
+                          <div class="signup-container">
+                            <div class="signup-input-area ng-invalid ng-invalid-validusername ng-invalid-password ng-dirty ng-valid-parse ng-valid-birthday" ng-form="" name="signupForm" rbx-form-context="" context="Rollercoaster2">
+                              <div class="birthday-container">
+                                <div class="form-group" ng-class="{'has-error' : isBirthdayInvalid(),'has-success' : isBirthdayFormDirty()&amp;&amp; !isBirthdayInvalid() }">
+                                  <label class="birthday-label ng-binding" ng-bind="'Label.Birthday' | translate">Birthday</label>
+                                  <div ng-if="!isDateTimeI18nPickerEnabled" class="form-control fake-input-lg ng-scope">
+                                    <div ng-class="{ 'first': !isAsianBirthdayUsed }" class="rbx-select-group month first">
+                                      <select class="input-field rbx-select ng-valid ng-empty ng-dirty ng-valid-parse ng-valid-birthday ng-touched" id="MonthDropdown" tabindex="1" rbx-valid-birthday="" rbx-form-interaction="" rbx-form-validation="" name="birthdayMonth" ng-model="signup.birthdayMonth" ng-change="onChange()">
+                                        <option value="" disabled="disabled" class="ng-binding" selected="selected">Month</option><!-- ngRepeat: m in layout.months -->
+                                        <option ng-repeat="m in layout.months" value="Jan" class="ng-binding ng-scope">January</option><!-- end ngRepeat: m in layout.months -->
+                                        <option ng-repeat="m in layout.months" value="Feb" class="ng-binding ng-scope">February</option><!-- end ngRepeat: m in layout.months -->
+                                        <option ng-repeat="m in layout.months" value="Mar" class="ng-binding ng-scope">March</option><!-- end ngRepeat: m in layout.months -->
+                                        <option ng-repeat="m in layout.months" value="Apr" class="ng-binding ng-scope">April</option><!-- end ngRepeat: m in layout.months -->
+                                        <option ng-repeat="m in layout.months" value="May" class="ng-binding ng-scope">May</option><!-- end ngRepeat: m in layout.months -->
+                                        <option ng-repeat="m in layout.months" value="Jun" class="ng-binding ng-scope">June</option><!-- end ngRepeat: m in layout.months -->
+                                        <option ng-repeat="m in layout.months" value="Jul" class="ng-binding ng-scope">July</option><!-- end ngRepeat: m in layout.months -->
+                                        <option ng-repeat="m in layout.months" value="Aug" class="ng-binding ng-scope">August</option><!-- end ngRepeat: m in layout.months -->
+                                        <option ng-repeat="m in layout.months" value="Sep" class="ng-binding ng-scope">September</option><!-- end ngRepeat: m in layout.months -->
+                                        <option ng-repeat="m in layout.months" value="Oct" class="ng-binding ng-scope">October</option><!-- end ngRepeat: m in layout.months -->
+                                        <option ng-repeat="m in layout.months" value="Nov" class="ng-binding ng-scope">November</option><!-- end ngRepeat: m in layout.months -->
+                                        <option ng-repeat="m in layout.months" value="Dec" class="ng-binding ng-scope">December</option><!-- end ngRepeat: m in layout.months -->
+                                      </select>
+                                    </div>
+                                    <div class="rbx-select-group day" ng-class="{ 'last': isAsianBirthdayUsed }">
+                                      <select class="input-field rbx-select ng-untouched ng-valid ng-empty ng-dirty ng-valid-parse ng-valid-birthday" id="DayDropdown" tabindex="1" rbx-valid-birthday="" rbx-form-interaction="" rbx-form-validation="" name="birthdayDay" ng-model="signup.birthdayDay" ng-change="onChange()">
+                                        <option value="" disabled="disabled" class="ng-binding" selected="selected">Day</option><!-- ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="01" class="ng-binding ng-scope">01</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="02" class="ng-binding ng-scope">02</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="03" class="ng-binding ng-scope">03</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="04" class="ng-binding ng-scope">04</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="05" class="ng-binding ng-scope">05</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="06" class="ng-binding ng-scope">06</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="07" class="ng-binding ng-scope">07</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="08" class="ng-binding ng-scope">08</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="09" class="ng-binding ng-scope">09</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="10" class="ng-binding ng-scope">10</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="11" class="ng-binding ng-scope">11</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="12" class="ng-binding ng-scope">12</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="13" class="ng-binding ng-scope">13</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="14" class="ng-binding ng-scope">14</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="15" class="ng-binding ng-scope">15</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="16" class="ng-binding ng-scope">16</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="17" class="ng-binding ng-scope">17</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="18" class="ng-binding ng-scope">18</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="19" class="ng-binding ng-scope">19</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="20" class="ng-binding ng-scope">20</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="21" class="ng-binding ng-scope">21</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="22" class="ng-binding ng-scope">22</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="23" class="ng-binding ng-scope">23</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="24" class="ng-binding ng-scope">24</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="25" class="ng-binding ng-scope">25</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="26" class="ng-binding ng-scope">26</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="27" class="ng-binding ng-scope">27</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="28" class="ng-binding ng-scope">28</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="29" class="ng-binding ng-scope">29</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="30" class="ng-binding ng-scope">30</option><!-- end ngRepeat: d in layout.dates -->
+                                        <option ng-repeat="d in layout.dates" value="31" class="ng-binding ng-scope">31</option><!-- end ngRepeat: d in layout.dates -->
+                                      </select>
+                                    </div>
+                                    <div ng-if="!isAsianBirthdayUsed" class="rbx-select-group year last ng-scope">
+                                      <select class="input-field rbx-select ng-untouched ng-valid ng-empty ng-dirty ng-valid-parse ng-valid-birthday" id="YearDropdown" rbx-valid-birthday="" rbx-form-interaction="" rbx-form-validation="" tabindex="1" name="birthdayYear" ng-model="signup.birthdayYear" ng-change="onChange()">
+                                        <option value="" disabled="disabled" class="ng-binding" selected="selected">Year</option><!-- ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2019" class="ng-binding ng-scope">2019</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2018" class="ng-binding ng-scope">2018</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2017" class="ng-binding ng-scope">2017</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2016" class="ng-binding ng-scope">2016</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2015" class="ng-binding ng-scope">2015</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2014" class="ng-binding ng-scope">2014</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2013" class="ng-binding ng-scope">2013</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2012" class="ng-binding ng-scope">2012</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2011" class="ng-binding ng-scope">2011</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2010" class="ng-binding ng-scope">2010</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2009" class="ng-binding ng-scope">2009</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2008" class="ng-binding ng-scope">2008</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2007" class="ng-binding ng-scope">2007</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2006" class="ng-binding ng-scope">2006</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2005" class="ng-binding ng-scope">2005</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2004" class="ng-binding ng-scope">2004</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2003" class="ng-binding ng-scope">2003</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2002" class="ng-binding ng-scope">2002</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2001" class="ng-binding ng-scope">2001</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="2000" class="ng-binding ng-scope">2000</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1999" class="ng-binding ng-scope">1999</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1998" class="ng-binding ng-scope">1998</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1997" class="ng-binding ng-scope">1997</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1996" class="ng-binding ng-scope">1996</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1995" class="ng-binding ng-scope">1995</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1994" class="ng-binding ng-scope">1994</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1993" class="ng-binding ng-scope">1993</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1992" class="ng-binding ng-scope">1992</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1991" class="ng-binding ng-scope">1991</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1990" class="ng-binding ng-scope">1990</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1989" class="ng-binding ng-scope">1989</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1988" class="ng-binding ng-scope">1988</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1987" class="ng-binding ng-scope">1987</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1986" class="ng-binding ng-scope">1986</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1985" class="ng-binding ng-scope">1985</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1984" class="ng-binding ng-scope">1984</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1983" class="ng-binding ng-scope">1983</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1982" class="ng-binding ng-scope">1982</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1981" class="ng-binding ng-scope">1981</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1980" class="ng-binding ng-scope">1980</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1979" class="ng-binding ng-scope">1979</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1978" class="ng-binding ng-scope">1978</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1977" class="ng-binding ng-scope">1977</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1976" class="ng-binding ng-scope">1976</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1975" class="ng-binding ng-scope">1975</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1974" class="ng-binding ng-scope">1974</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1973" class="ng-binding ng-scope">1973</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1972" class="ng-binding ng-scope">1972</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1971" class="ng-binding ng-scope">1971</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1970" class="ng-binding ng-scope">1970</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1969" class="ng-binding ng-scope">1969</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1968" class="ng-binding ng-scope">1968</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1967" class="ng-binding ng-scope">1967</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1966" class="ng-binding ng-scope">1966</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1965" class="ng-binding ng-scope">1965</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1964" class="ng-binding ng-scope">1964</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1963" class="ng-binding ng-scope">1963</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1962" class="ng-binding ng-scope">1962</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1961" class="ng-binding ng-scope">1961</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1960" class="ng-binding ng-scope">1960</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1959" class="ng-binding ng-scope">1959</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1958" class="ng-binding ng-scope">1958</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1957" class="ng-binding ng-scope">1957</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1956" class="ng-binding ng-scope">1956</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1955" class="ng-binding ng-scope">1955</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1954" class="ng-binding ng-scope">1954</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1953" class="ng-binding ng-scope">1953</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1952" class="ng-binding ng-scope">1952</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1951" class="ng-binding ng-scope">1951</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1950" class="ng-binding ng-scope">1950</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1949" class="ng-binding ng-scope">1949</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1948" class="ng-binding ng-scope">1948</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1947" class="ng-binding ng-scope">1947</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1946" class="ng-binding ng-scope">1946</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1945" class="ng-binding ng-scope">1945</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1944" class="ng-binding ng-scope">1944</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1943" class="ng-binding ng-scope">1943</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1942" class="ng-binding ng-scope">1942</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1941" class="ng-binding ng-scope">1941</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1940" class="ng-binding ng-scope">1940</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1939" class="ng-binding ng-scope">1939</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1938" class="ng-binding ng-scope">1938</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1937" class="ng-binding ng-scope">1937</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1936" class="ng-binding ng-scope">1936</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1935" class="ng-binding ng-scope">1935</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1934" class="ng-binding ng-scope">1934</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1933" class="ng-binding ng-scope">1933</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1932" class="ng-binding ng-scope">1932</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1931" class="ng-binding ng-scope">1931</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1930" class="ng-binding ng-scope">1930</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1929" class="ng-binding ng-scope">1929</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1928" class="ng-binding ng-scope">1928</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1927" class="ng-binding ng-scope">1927</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1926" class="ng-binding ng-scope">1926</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1925" class="ng-binding ng-scope">1925</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1924" class="ng-binding ng-scope">1924</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1923" class="ng-binding ng-scope">1923</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1922" class="ng-binding ng-scope">1922</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1921" class="ng-binding ng-scope">1921</option><!-- end ngRepeat: y in layout.years -->
+                                        <option ng-repeat="y in layout.years" value="1920" class="ng-binding ng-scope">1920</option><!-- end ngRepeat: y in layout.years -->
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <p id="signup-BirthdayInputValidation" class="form-control-label input-validation text-error ng-binding" ng-bind="getBirthdayInvalidMessage()"></p>
+                                </div>
+                              </div>
+                              <div class="form-group" ng-class="{'has-error' : (badSubmit || signupForm.signupUsername.$dirty) &amp;&amp; signupForm.signupUsername.$invalid, 'has-success': (signupForm.signupUsername.$dirty &amp;&amp; signupForm.signupUsername.$valid) }">
+                                <input id="signup-username" ng-trim="false" ng-change="onChange()" name="signupUsername" class="form-control input-field ng-pristine ng-invalid ng-invalid-validusername ng-empty ng-touched" autocomplete="signup-username" tabindex="1" rbx-valid-username="" rbx-form-interaction="" send-input-value="true" rbx-form-validation="" placeholder="Username" ng-model="signup.username">
+                                <p id="signup-usernameInputValidation" class="form-control-label input-validation ng-binding text-info" ng-class="{'text-error': signup.username.length, 'text-info': !signup.username.length}" ng-bind="getHintForUsername()">Don't use your real name</p>
+                              </div>
+                              <div class="form-group password-form-group" ng-class="{'has-error' : (badSubmit || signupForm.signupPassword.$dirty) &amp;&amp; signupForm.signupPassword.$invalid, 'has-success': (signupForm.signupPassword.$dirty &amp;&amp; signupForm.signupPassword.$valid) }">
+                                <input id="signup-password" ng-trim="false" name="signupPassword" class="form-control input-field password-with-visibility-toggle ng-pristine ng-empty ng-invalid ng-invalid-password ng-touched" type="password" autocomplete="new-password" tabindex="2" rbx-valid-password="" rbx-form-interaction="" rbx-form-validation="" rbx-form-validation-redact-input="" placeholder="Password" ng-model="signup.password" ng-click="passwordBoxClicked()">
+                                <div ng-show="signup.password" class="icon-password-show password-visibility-toggle ng-hide" ng-class="layout.showPassword ? 'icon-password-hide' : 'icon-password-show'" ng-click="togglePasswordVisibility()"></div>
+                                <p id="signup-passwordInputValidation" class="form-control-label input-validation ng-binding text-info" ng-class="{'text-error': signup.password.length, 'text-info': !signup.password.length}" ng-bind="getHintForPassword()">Min length 8</p>
+                              </div>
+                              <div class="gender-container">
+                                <div class="form-group" ng-class="{'has-error' : isGenderInvalid(), 'has-success': isGenderValid() }">
+                                  <div class="form-control fake-input-lg">
+                                    <label ng-bind="'Label.Gender' | translate" class="ng-binding">Gender</label>
+                                    <div id="FemaleButton" class="gender-circle" tabindex="7" rbx-form-interaction="" name="genderFemale" ng-class="{ 'selected-gender': signup.gender === genderType.female }" ng-click="setGender($event, genderType.female)" ng-keypress="setGender($event, genderType.female)">
+                                      <div class="cover-sprite gender female"></div>
+                                    </div>
+                                    <div id="MaleButton" class="gender-circle" tabindex="8" rbx-form-interaction="" name="genderMale" ng-class="{ 'selected-gender': signup.gender === genderType.male }" ng-click="setGender($event, genderType.male)" ng-keypress="setGender($event, genderType.male)">
+                                      <div class="cover-sprite gender male"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div fun-captcha="" captcha-model="captchaSetting" captcha-type="captchaSetting.captchaType" show-in-modal="captchaSetting.showInModal" on-fun-captcha-success="captchaSetting.successCb()" on-fun-captcha-error="captchaSetting.errorCb(errorCode)" on-fun-captcha-closed="captchaSetting.closedCb()" class="ng-isolate-scope">
+                                <div id="signup-captcha" ng-show="showContainer"></div>
+                              </div>
+                              <captcha activated="captchaActivated" captcha-action-type="captchaActionTypes.signup" captcha-failed="handleCaptchaError" captcha-passed="submitSignup" class="ng-isolate-scope">
+                                <div class="modal" ng-class="$ctrl.getCaptchaClasses()" ng-click="$ctrl.hideCaptcha()">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-body" ng-click="$event.stopPropagation()">
+                                        <button type="button" class="close" ng-click="$ctrl.hideCaptcha()">
+                                          <span aria-hidden="true">
+                                            <span class="icon-close"></span>
+                                          </span>
+                                          <span class="sr-only">Close</span>
+                                        </button>
+                                        <div id="captchaV2-3" class="captchav2-funcaptcha-modal-body"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </captcha>
+                              <button id="signup-button" type="button" tabindex="10" class="btn-primary-md signup-submit-button ng-binding" name="signupSubmit" onclick="signup()">Sign Up</button><!-- ngIf: layout.isFbSignUpEnabled -->
+                              <noscript>
+                                <div class=text-danger>
+                                  <strong ng-bind="Response.JavaScriptRequired | translate"></strong>
+                                </div>
+                              </noscript>
+                              <div id="GeneralErrorText" class="input-validation-large alert-warning font-bold ng-binding ng-hide" ng-show="signupForm.$generalError" ng-bind="signupForm.$generalErrorText" ng-click="signupForm.$generalError=false"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="row full-height-section" id="WhatsRobloxContainer">
+              <div class="col-md-12 inner-full-height-section">
+                <div id="InnerWhatsRobloxContainer1" class="row whats-roblox-container" ng-class="{'whats-roblox-container' : landingLayout.addBackgroundImages}">
+                  <div id="WhatIsRobloxTextBg" class="col-sm-5 col-sm-offset-6 col-xs-12">
+                    <h1 class="text-center whats-roblox-heading ng-binding" ng-bind="'Heading.WhatIsRoblox' | translate">What is Roblox?</h1>
+                    <p class="lead text-justify whats-roblox-description ng-binding" ng-bind="'Heading.WhatIsRobloxParagraphTwo' | translate">Roblox is the best place to Imagine with Friends. With the largest user-generated online gaming platform, and over 15 million games created by users, Roblox is the #1 gaming site for kids and teens (comScore). Every day, virtual explorers come to Roblox to create adventures, play games, role play, and learn with their friends in a family-friendly, immersive, 3D environment.</p>
+                  </div>
+                </div>
+                <div class="row" id="InnerWhatsRobloxContainer2">
+                  <div id="GameImage1" class="col-sm-4 col-xs-12 game-image game-image-1" ng-class="{'game-image-1' : landingLayout.addBackgroundImages}"></div>
+                  <div id="GameImage2" class="hidden-xs col-sm-4 game-image game-image-2" ng-class="{'game-image-2' : landingLayout.addBackgroundImages}"></div>
+                  <div id="GameImage3" class="col-sm-4 hidden-xs game-image game-image-3" ng-class="{'game-image-3' : landingLayout.addBackgroundImages}"></div>
+                </div>
+              </div>
+            </section>
+            <div class="clearfix"></div>
+            <section id="DeviceSection">``
+              <div class="row" id="RobloxDeviceText">
+                <div class="col-md-6 col-md-offset-3">
+                  <h2 class="devices-heading ng-binding" ng-bind="'Heading.RobloxOnDevice' | translate">Roblox on your Device</h2>
+                  <p class="lead center-block devices-description ng-binding" ng-bind="'Description.RobloxOnDeviceParagraphTwo' | translate">You can access Roblox on PC, Mac, iOS, Android, Amazon Devices, and Xbox One. Roblox adventures are accessible from any device, so players can imagine with their friends regardless of where they are.</p>
+                </div>
+              </div>
+              <div class="row" id="DeviceImageContainer">
+                <div class="col-md-12">
+                  <div class="row text-center">
+                    <div class="hidden-lg devices-container-small devices-container-small-background" ng-class="{'devices-container-small-background' : landingLayout.addBackgroundImages}">
+                      <div class="devices-img devices-img-small"></div>
+                    </div>
+                    <div class="visible-lg-block devices-container-large devices-container-large-background" ng-class="{'devices-container-large-background' : landingLayout.addBackgroundImages}">
+                      <div class="devices-img devices-img-large"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul id="AppStoreContainer" class="row text-center app-store-container row-five">
+                <li>
+                  <a ng-href="" class="app-store-link-apple" href="">
+                    <span class="app-store-logo apple-logo" title="Roblox on App Store"></span>
+                  </a>
+                </li>
+                <li>
+                  <a ng-href="" class="app-store-link-android" href="">
+                    <span class="app-store-logo android android-logo" title="Get it on Google Play"></span>
+                  </a>
+                </li>
+                <li>
+                  <a ng-href="" class="app-store-link-amazon" href="">
+                    <span class="app-store-logo amazon-logo" title="Roblox on Amazon Store"></span>
+                  </a>
+                </li>
+                <li>
+                  <a ng-href="" class="app-store-link-xbox" href="">
+                    <span class="app-store-logo xbox-logo" title="Roblox on Xbox Store"></span>
+                  </a>
+                </li>
+                <li>
+                  <a ng-href="" class="app-store-link-windows" href="">
+                    <span class="app-store-logo win-logo" title="Roblox on Windows Store"></span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="container-footer">
+      <div class="footer">
+        <ul class="row footer-links">
+          <li class="footer-link">
+            <a href="" class="text-footer-nav roblox-interstitial" target="_blank">
+                About Us
+            </a>
+          </li>
+          <li class="footer-link">
+            <a href="" class="text-footer-nav roblox-interstitial" target="_blank">
+                Jobs
+            </a>
+          </li>
+          <li class=" footer-link">
+            <a href="" class="text-footer-nav" target="_blank">
+                Blog
+            </a>
+          </li>
+          <li class=" footer-link">
+            <a href="" class="text-footer-nav roblox-interstitial" target="_blank">
+                Parents
+            </a>
+          </li>
+          <li class=" footer-link">
+            <a href="" class="text-footer-nav roblox-interstitial" target="_blank">
+                Help
+            </a>
+          </li>
+          <li class=" footer-link">
+            <a href="" class="text-footer-nav" target="_blank">
+                Terms
+            </a>
+          </li>
+          <li class=" footer-link">
+            <a href="" class="text-footer-nav privacy" target="_blank">Privacy</a>
+          </li>
+        </ul>
+        <div class="row copyright-wrapper">
+          <div class="col-sm-6 col-md-3">
+            <div class="rbx-select-group icon-dropdown">
+              <select class="rbx-select language-select" id="language-switcher">
+                <option value="de_de" data-is-supported="true">
+                    Deutsch
+                </option>
+                <option value="en_us" data-is-supported="true" selected="">
+                    English
+                </option>
+                <option value="es_es" data-is-supported="true">
+                    Español
+                </option>
+                <option value="fr_fr" data-is-supported="true">
+                    Français
+                </option>
+                <option value="pt_br" data-is-supported="true">
+                    Português (Brasil)
+                </option>
+                <option value="ko_kr" data-is-supported="true">
+                    한국어
+                </option>
+                <option value="zh_cn" data-is-supported="true">
+                    中文(简体)
+                </option>
+                <option value="zh_tw" data-is-supported="true">
+                    中文(繁體)
+                </option>
+                <option value="id_id" data-is-supported="false">
+                    Bahasa Indonesia*
+                </option>
+                <option value="ms_my" data-is-supported="false">
+                    bahasa Melayu*
+                </option>
+                <option value="nb_no" data-is-supported="false">
+                    bokmål*
+                </option>
+                <option value="cs_cz" data-is-supported="false">
+                    čeština*
+                </option>
+                <option value="da_dk" data-is-supported="false">
+                    dansk*
+                </option>
+                <option value="et_ee" data-is-supported="false">
+                    eesti*
+                </option>
+                <option value="fil_ph" data-is-supported="false">
+                    Filipino*
+                </option>
+                <option value="hr_hr" data-is-supported="false">
+                    hrvatski*
+                </option>
+                <option value="it_it" data-is-supported="false">
+                    Italiano*
+                </option>
+                <option value="lv_lv" data-is-supported="false">
+                    latviešu*
+                </option>
+                <option value="lt_lt" data-is-supported="false">
+                    lietuvių*
+                </option>
+                <option value="hu_hu" data-is-supported="false">
+                    magyar*
+                </option>
+                <option value="nl_nl" data-is-supported="false">
+                    Nederlands*
+                </option>
+                <option value="pl_pl" data-is-supported="false">
+                    polski*
+                </option>
+                <option value="ro_ro" data-is-supported="false">
+                    română*
+                </option>
+                <option value="sq_al" data-is-supported="false">
+                    shqipe*
+                </option>
+                <option value="sk_sk" data-is-supported="false">
+                    slovenčina*
+                </option>
+                <option value="sl_sl" data-is-supported="false">
+                    slovenski*
+                </option>
+                <option value="fi_fi" data-is-supported="false">
+                    suomi*
+                </option>
+                <option value="sv_se" data-is-supported="false">
+                    svenska*
+                </option>
+                <option value="vi_vn" data-is-supported="false">
+                    Tiếng Việt Nam*
+                </option>
+                <option value="tr_tr" data-is-supported="false">
+                    Türkçe*
+                </option>
+                <option value="el_gr" data-is-supported="false">
+                    ελληνικά*
+                </option>
+                <option value="bs_ba" data-is-supported="false">
+                    босански*
+                </option>
+                <option value="bg_bg" data-is-supported="false">
+                    български*
+                </option>
+                <option value="kk_kz" data-is-supported="false">
+                    қазақ тілі*
+                </option>
+                <option value="ru_ru" data-is-supported="false">
+                    Русский*
+                </option>
+                <option value="sr_rs" data-is-supported="false">
+                    српски*
+                </option>
+                <option value="uk_ua" data-is-supported="false">
+                    україньска*
+                </option>
+                <option value="ka_ge" data-is-supported="false">
+                    ქართული*
+                </option>
+                <option value="hi_in" data-is-supported="false">
+                    हिन्दी*
+                </option>
+                <option value="bn_bd" data-is-supported="false">
+                    বাংলা*
+                </option>
+                <option value="si_lk" data-is-supported="false">
+                    සිංහල*
+                </option>
+                <option value="th_th" data-is-supported="false">
+                    ภาษาไทย*
+                </option>
+                <option value="my_mm" data-is-supported="false">
+                    ဗမာစာ*
+                </option>
+                <option value="km_kh" data-is-supported="false">
+                    ភាសាខ្មែរ*
+                </option>
+                <option value="ja_jp" data-is-supported="false">
+                    日本語*
+                </option>
+              </select>
+              <span class="icon-arrow icon-down-16x16"></span>
+            </div>
+            <div class="input-group-btn">
+              <button type="button" class="input-dropdown-btn" data-toggle="dropdown">
+                <span class="icon-globe"></span>
+                <span class="rbx-selection-label" data-bind="label">English</span>
+                <span class="icon-down-16x16"></span>
+              </button>
+              <ul data-toggle="dropdown-menu" class="dropdown-menu" role="menu">
+                <li>
+                  <a href="#" class="locale-option" data-locale="de_de" data-is-supported="true">
+                      Deutsch
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="en_us" data-is-supported="true">
+                      English
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="es_es" data-is-supported="true">
+                      Español
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="fr_fr" data-is-supported="true">
+                      Français
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="pt_br" data-is-supported="true">
+                      Português (Brasil)
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="ko_kr" data-is-supported="true">
+                      한국어
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="zh_cn" data-is-supported="true">
+                      中文(简体)
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="zh_tw" data-is-supported="true">
+                      中文(繁體)
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="id_id" data-is-supported="false">
+                      Bahasa Indonesia*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="ms_my" data-is-supported="false">
+                      bahasa Melayu*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="nb_no" data-is-supported="false">
+                      bokmål*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="cs_cz" data-is-supported="false">
+                      čeština*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="da_dk" data-is-supported="false">
+                      dansk*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="et_ee" data-is-supported="false">
+                      eesti*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="fil_ph" data-is-supported="false">
+                      Filipino*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="hr_hr" data-is-supported="false">
+                      hrvatski*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="it_it" data-is-supported="false">
+                      Italiano*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="lv_lv" data-is-supported="false">
+                      latviešu*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="lt_lt" data-is-supported="false">
+                      lietuvių*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="hu_hu" data-is-supported="false">
+                      magyar*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="nl_nl" data-is-supported="false">
+                      Nederlands*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="pl_pl" data-is-supported="false">
+                      polski*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="ro_ro" data-is-supported="false">
+                      română*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="sq_al" data-is-supported="false">
+                      shqipe*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="sk_sk" data-is-supported="false">
+                      slovenčina*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="sl_sl" data-is-supported="false">
+                      slovenski*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="fi_fi" data-is-supported="false">
+                      suomi*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="sv_se" data-is-supported="false">
+                      svenska*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="vi_vn" data-is-supported="false">
+                      Tiếng Việt Nam*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="tr_tr" data-is-supported="false">
+                      Türkçe*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="el_gr" data-is-supported="false">
+                      ελληνικά*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="bs_ba" data-is-supported="false">
+                      босански*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="bg_bg" data-is-supported="false">
+                      български*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="kk_kz" data-is-supported="false">
+                      қазақ тілі*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="ru_ru" data-is-supported="false">
+                      Русский*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="sr_rs" data-is-supported="false">
+                      српски*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="uk_ua" data-is-supported="false">
+                      україньска*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="ka_ge" data-is-supported="false">
+                      ქართული*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="hi_in" data-is-supported="false">
+                      हिन्दी*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="bn_bd" data-is-supported="false">
+                      বাংলা*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="si_lk" data-is-supported="false">
+                      සිංහල*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="th_th" data-is-supported="false">
+                      ภาษาไทย*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="my_mm" data-is-supported="false">
+                      ဗမာစာ*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="km_kh" data-is-supported="false">
+                      ភាសាខ្មែរ*
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="locale-option" data-locale="ja_jp" data-is-supported="false">
+                      日本語*
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-9">
+            <p class="text-footer footer-note">©2019 Roblox Corporation. Roblox, the Roblox logo and Powering Imagination are among our registered and unregistered trademarks in the U.S. and other countries.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
